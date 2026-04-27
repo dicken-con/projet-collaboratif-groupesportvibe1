@@ -1,263 +1,1302 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Football – SportVibe</title>
-  <link rel="stylesheet" href="style.css"/>
-  <style>
-    :root { --accent-color: #00C853; }
-    .btn-add-cart { background: #00C853 !important; }
-    .product-category { color: #00C853 !important; }
-    .cat-hero { border-bottom-color: #00C853; }
-  </style>
-</head>
-<body>
+/* ============================================================
+   SPORTVIBE - Style Global
+   ============================================================ */
 
-<nav class="navbar">
-  <a class="nav-logo" href="index.html">⚡ SPORTVIBE</a>
-  <div class="nav-links">
-    <a href="index.html">Accueil</a>
-    <div class="nav-dropdown">
-      <a href="#" class="active">Catégories</a>
-      <div class="dropdown-menu">
-        <a href="football.html">⚽ Football</a>
-        <a href="basketball.html">🏀 Basketball</a>
-        <a href="tennis.html">🎾 Tennis</a>
-        <a href="natation.html">🏊 Natation</a>
-        <a href="fitness.html">💪 Fitness</a>
-      </div>
-    </div>
-    <a href="apropos.html">À Propos</a>
-  </div>
-  <a href="panier.html" class="btn-cart">🛒 Panier <span class="cart-count" id="cartCount">0</span></a>
-</nav>
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,400;0,600;0,700;0,900;1,400&display=swap');
 
-<div class="page-wrapper">
-
-  <div class="cat-hero" style="--accent-color:#00C853;">
-    <div class="cat-hero-icon">⚽</div>
-    <div class="cat-hero-text">
-      <div class="cat-breadcrumb"><a href="index.html">Accueil</a> › Football</div>
-      <h1>FOOTBALL</h1>
-      <p>Tout l'équipement pour dominer le terrain — du ballon aux crampons</p>
-    </div>
-  </div>
-
-  <div class="products-section">
-    <div class="products-top">
-      <div class="products-count">7 articles trouvés</div>
-      <select class="sort-select">
-        <option>Trier par : Popularité</option>
-        <option>Prix croissant</option>
-        <option>Prix décroissant</option>
-        <option>Nouveautés</option>
-      </select>
-    </div>
-
-    <div class="products-grid">
-
-      <!-- Produit 1 -->
-      <div class="product-card">
-        <span class="product-badge top">TOP VENTE</span>
-        <div class="product-img">
-    <img src="image/imballonfoot.jfif" alt="Montre SportTrack Pro" style="width: 100%; height: auto;">
-</div>
-        <div class="product-body">
-          <div class="product-category">FOOTBALL</div>
-          <div class="product-name">Ballon Pro Match FIFA</div>
-          <div class="product-desc">Ballon certifié FIFA Quality Pro, idéal pour les compétitions officielles. Excellente résistance et touche précise.</div>
-          <div class="product-stars">★★★★★ (128)</div>
-          <div class="product-footer">
-            <div class="product-price">
-              <span class="price-current">15000 frcs</span>
-              <span class="price-old">20000 frcs</span>
-            </div>
-            <button class="btn-add-cart" onclick="addToCart('Ballon Pro Match FIFA', 29.99, '⚽')">🛒 Ajouter</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Produit 2 -->
-      <div class="product-card">
-        <span class="product-badge new">NOUVEAU</span>
-        <div class="product-img">
-    <img src="image/cramponfoot.jfif" alt="Montre SportTrack Pro" style="width: 100%; height: auto;">
-</div>
-        <div class="product-body">
-          <div class="product-category">FOOTBALL</div>
-          <div class="product-name">Crampons Speed Elite FG</div>
-          <div class="product-desc">Crampons terrain naturel pour joueurs compétitifs. Semelle carbone ultra-légère, tige en mesh respirant.</div>
-          <div class="product-stars">★★★★☆ (84)</div>
-          <div class="product-footer">
-            <div class="product-price">
-              <span class="price-current">8000 frcs</span>
-            </div>
-            <button class="btn-add-cart" onclick="addToCart('Crampons Speed Elite FG', 89.99, '👟')">🛒 Ajouter</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Produit 3 -->
-      <div class="product-card">
-      
-        <div class="product-body">
-          <div class="product-img">
-    <img src="image/gantsfoot.jfif" alt="Montre SportTrack Pro" style="width: 100%; height: auto;">
-</div>
-          <div class="product-name">Gants de Gardien GK Pro</div>
-          <div class="product-desc">Gants gardien avec mousse latex 3mm, protections dorsales renforcées. Coupe Negative Cut pour une touche de balle optimale.</div>
-          <div class="product-stars">★★★★★ (62)</div>
-          <div class="product-footer">
-            <div class="product-price">
-              <span class="price-current">7000 frcs</span>
-              <span class="price-old">9000 frcs</span>
-            </div>
-            <button class="btn-add-cart" onclick="addToCart('Gants Gardien GK Pro', 44.99, '🧤')">🛒 Ajouter</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Produit 4 -->
-      <div class="product-card">
-        <span class="product-badge promo">-25%</span>
-        <div class="product-img">
-    <img src="image/maillofoot.jfif" alt="Montre SportTrack Pro" style="width: 100%; height: auto;">
-</div>
-        <div class="product-body">
-          <div class="product-category">FOOTBALL</div>
-          <div class="product-name">Maillot Domicile Club Pro</div>
-          <div class="product-desc">Maillot en tissu DriFit ultra-léger, technologie anti-odeurs. Broderie club haute qualité. Disponible en XS à XXL.</div>
-          <div class="product-stars">★★★★☆ (201)</div>
-          <div class="product-footer">
-            <div class="product-price">
-              <span class="price-current">11000 frcs</span>
-              <span class="price-old">15000 frcs</span>
-            </div>
-            <button class="btn-add-cart" onclick="addToCart('Maillot Domicile Club Pro', 37.49, '🦺')">🛒 Ajouter</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Produit 5 -->
-      <div class="product-card">
-        <div class="product-img">
-    <img src="image/cagefoot.jfif" alt="Montre SportTrack Pro" style="width: 100%; height: auto;">
-</div>
-        <div class="product-body">
-          <div class="product-category">FOOTBALL</div>
-          <div class="product-name">But Pliable Junior 120×80</div>
-          <div class="product-desc">Cage de foot portable pour entraînements individuels. Montage sans outil en 2 minutes, filet inclus, sac de transport.</div>
-          <div class="product-stars">★★★★☆ (47)</div>
-          <div class="product-footer">
-            <div class="product-price">
-              <span class="price-current">12000 frcs</span>
-            </div>
-            <button class="btn-add-cart" onclick="addToCart('But Pliable Junior', 54.99, '🥅')">🛒 Ajouter</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Produit 6 -->
-      <div class="product-card">
-        <div class="product-img">
-    <img src="image/shortcompfoot.jfif" alt="Montre SportTrack Pro" style="width: 100%; height: auto;">
-</div>
-        <div class="product-body">
-          <div class="product-category">FOOTBALL</div>
-          <div class="product-name">Short Match Compression</div>
-          <div class="product-desc">Short de match avec sous-short compression intégré, ceinture élastique réglable, poche zippée latérale.</div>
-          <div class="product-stars">★★★☆☆ (33)</div>
-          <div class="product-footer">
-            <div class="product-price">
-              <span class="price-current">10000 frcs</span>
-            </div>
-            <button class="btn-add-cart" onclick="addToCart('Short Match Compression', 24.99, '🩲')">🛒 Ajouter</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Produit 7 -->
-      <div class="product-card">
-        <span class="product-badge new">NOUVEAU</span>
-        <div class="product-img">
-    <img src="image/kitfoot.jfif" alt="Montre SportTrack Pro" style="width: 100%; height: auto;">
-</div>
-        <div class="product-body">
-          <div class="product-category">FOOTBALL</div>
-          <div class="product-name">Kit Entraînement Complet</div>
-          <div class="product-desc">plot , arssot et autre pour un entrenaiment complt</div>
-          <div class="product-stars">★★★★★ (91)</div>
-          <div class="product-footer">
-            <div class="product-price">
-              <span class="price-current">69000 frcs</span>
-              <span class="price-old">89000 frcs</span>
-            </div>
-            <button class="btn-add-cart" onclick="addToCart('Kit Entraînement Complet', 69.99, '🎽')">🛒 Ajouter</button>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-</div>
-
-<footer class="footer">
-  <div class="footer-grid">
-    <div class="footer-brand">
-      <div class="footer-logo">⚡ SPORTVIBE</div>
-      <p class="footer-desc">Votre partenaire sport depuis 2015.</p>
-    </div>
-    <div class="footer-col">
-      <h4>Sports</h4>
-      <ul>
-        <li><a href="football.html">⚽ Football</a></li>
-        <li><a href="basketball.html">🏀 Basketball</a></li>
-        <li><a href="tennis.html">🎾 Tennis</a></li>
-        <li><a href="natation.html">🏊 Natation</a></li>
-        <li><a href="fitness.html">💪 Fitness</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Infos</h4>
-      <ul>
-        <li><a href="apropos.html">À Propos</a></li>
-        <li><a href="panier.html">Mon Panier</a></li>
-        <li><a href="#">Livraison</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Contact</h4>
-      <ul>
-        <li><a href="#">📧 contact@sportvibe.fr</a></li>
-        <li><a href="#">📞 221 78 942 42 90</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p class="footer-copy">© 2025 SportVibe. Tous droits réservés.</p>
-  </div>
-</footer>
-
-<div class="toast" id="toast">✅ Produit ajouté au panier !</div>
-
-<script>
-function getCart() { return JSON.parse(localStorage.getItem('sportvibe-cart') || '[]'); }
-function saveCart(c) { localStorage.setItem('sportvibe-cart', JSON.stringify(c)); }
-function updateCount() {
-  const c = getCart();
-  document.getElementById('cartCount').textContent = c.reduce((s,i)=>s+i.qty,0);
+/* --- Variables --- */
+:root {
+  --rouge:    #FF1744;
+  --orange:   #FF6D00;
+  --jaune:    #FFD600;
+  --vert:     #00C853;
+  --bleu:     #0091EA;
+  --violet:   #AA00FF;
+  --noir:     #0A0A0A;
+  --gris-f:   #1A1A1A;
+  --gris-m:   #2C2C2C;
+  --gris-c:   #999;
+  --blanc:    #FFFFFF;
+  --nav-h:    70px;
 }
-function addToCart(name, price, emoji) {
-  const c = getCart();
-  const idx = c.findIndex(i=>i.name===name);
-  if(idx>=0) c[idx].qty++; else c.push({name,price,emoji,qty:1});
-  saveCart(c); updateCount();
-  const t = document.getElementById('toast');
-  t.classList.add('show'); setTimeout(()=>t.classList.remove('show'),2500);
+
+/* --- Reset & Base --- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Barlow', sans-serif;
+  background: var(--noir);
+  color: var(--blanc);
+  min-height: 100vh;
 }
-updateCount();
-</script>
-</body>
-</html>
+
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; display: block; }
+ul { list-style: none; }
+
+/* --- NAVBAR --- */
+.navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: var(--nav-h);
+  background: rgba(10,10,10,0.97);
+  backdrop-filter: blur(12px);
+  border-bottom: 2px solid var(--rouge);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  z-index: 1000;
+}
+
+.nav-logo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2rem;
+  letter-spacing: 3px;
+  background: linear-gradient(90deg, var(--rouge), var(--orange), var(--jaune));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.nav-links a {
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.25s;
+  color: var(--gris-c);
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--blanc);
+  background: var(--rouge);
+}
+
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown > a::after {
+  content: ' ▾';
+  font-size: 0.7rem;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--gris-f);
+  border: 1px solid var(--gris-m);
+  border-top: 3px solid var(--rouge);
+  border-radius: 10px;
+  min-width: 180px;
+  padding: 8px 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.25s;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+}
+
+.nav-dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  top: calc(100% + 6px);
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px 18px;
+  font-size: 0.85rem;
+  color: var(--gris-c);
+  transition: all 0.2s;
+}
+
+.dropdown-menu a:hover {
+  color: var(--blanc);
+  background: var(--gris-m);
+  padding-left: 24px;
+}
+
+.nav-cart {
+  position: relative;
+}
+
+.btn-cart {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--rouge);
+  color: var(--blanc);
+  border: none;
+  padding: 10px 18px;
+  border-radius: 50px;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.25s;
+  text-decoration: none;
+}
+
+.btn-cart:hover {
+  background: var(--orange);
+  transform: scale(1.05);
+}
+
+.cart-count {
+  background: var(--jaune);
+  color: var(--noir);
+  border-radius: 50%;
+  width: 20px; height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 900;
+}
+
+/* --- PAGE WRAPPER --- */
+.page-wrapper {
+  padding-top: var(--nav-h);
+  min-height: 100vh;
+}
+
+/* ============================================================
+   HERO SECTION (Accueil)
+   ============================================================ */
+.hero {
+  position: relative;
+  height: calc(100vh - var(--nav-h));
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0A0A0A 0%, #1a0a00 50%, #0A0A0A 100%);
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 80% at 70% 50%, rgba(255,23,68,0.15) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 60% at 20% 80%, rgba(255,109,0,0.1) 0%, transparent 60%);
+}
+
+.hero-stripes {
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 40px,
+    rgba(255,255,255,0.015) 40px,
+    rgba(255,255,255,0.015) 41px
+  );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 0 80px;
+  max-width: 700px;
+}
+
+.hero-tag {
+  display: inline-block;
+  background: var(--rouge);
+  color: var(--blanc);
+  font-size: 0.75rem;
+  font-weight: 900;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  border-radius: 4px;
+  margin-bottom: 24px;
+}
+
+.hero h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(4rem, 9vw, 8rem);
+  line-height: 0.9;
+  letter-spacing: 2px;
+  margin-bottom: 28px;
+}
+
+.hero h1 span {
+  background: linear-gradient(90deg, var(--rouge), var(--orange));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero p {
+  font-size: 1.15rem;
+  color: rgba(255,255,255,0.7);
+  line-height: 1.7;
+  margin-bottom: 40px;
+  max-width: 500px;
+}
+
+.hero-btns {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(90deg, var(--rouge), var(--orange));
+  color: var(--blanc);
+  font-family: 'Barlow', sans-serif;
+  font-weight: 900;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 16px 36px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(255,23,68,0.5);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: transparent;
+  color: var(--blanc);
+  font-family: 'Barlow', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  padding: 16px 36px;
+  border-radius: 8px;
+  border: 2px solid rgba(255,255,255,0.3);
+  cursor: pointer;
+  transition: all 0.3s;
+  text-decoration: none;
+}
+
+.btn-secondary:hover {
+  border-color: var(--blanc);
+  background: rgba(255,255,255,0.08);
+}
+
+/* --- Stats Bar --- */
+.stats-bar {
+  background: var(--gris-f);
+  border-top: 3px solid var(--rouge);
+  padding: 30px 80px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.8rem;
+  background: linear-gradient(90deg, var(--rouge), var(--orange));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: var(--gris-c);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* --- Section Title --- */
+.section-header {
+  text-align: center;
+  padding: 80px 40px 40px;
+}
+
+.section-tag {
+  display: inline-block;
+  color: var(--rouge);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  letter-spacing: 2px;
+  line-height: 1;
+}
+
+.section-title span {
+  color: var(--rouge);
+}
+
+/* --- Categories Grid (Accueil) --- */
+.categories-section {
+  padding: 0 40px 80px;
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.cat-card {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--gris-f);
+  border: 1px solid var(--gris-m);
+  transition: all 0.35s;
+  cursor: pointer;
+  display: block;
+  text-decoration: none;
+}
+
+.cat-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  border-color: var(--accent, var(--rouge));
+}
+
+.cat-card-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+
+.cat-card:hover .cat-card-img {
+  transform: scale(1.05);
+}
+
+.cat-card-img-placeholder {
+  width: 100%;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
+  background: var(--bg, #1a1a1a);
+}
+
+.cat-card-body {
+  padding: 20px;
+}
+
+.cat-card-icon {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.cat-card-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+  color: var(--blanc);
+  margin-bottom: 6px;
+}
+
+.cat-card-count {
+  font-size: 0.8rem;
+  color: var(--gris-c);
+  letter-spacing: 1px;
+}
+
+.cat-card-arrow {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 36px; height: 36px;
+  background: var(--accent, var(--rouge));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+.cat-card:hover .cat-card-arrow {
+  transform: translateX(4px);
+}
+
+/* --- Promos Banner --- */
+.promo-banner {
+  margin: 0 40px 80px;
+  background: linear-gradient(135deg, var(--rouge) 0%, var(--orange) 100%);
+  border-radius: 20px;
+  padding: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  overflow: hidden;
+  position: relative;
+}
+
+.promo-banner::before {
+  content: '';
+  position: absolute;
+  right: -60px; top: -60px;
+  width: 300px; height: 300px;
+  border: 40px solid rgba(255,255,255,0.1);
+  border-radius: 50%;
+}
+
+.promo-banner::after {
+  content: '';
+  position: absolute;
+  right: 60px; bottom: -80px;
+  width: 200px; height: 200px;
+  border: 30px solid rgba(255,255,255,0.08);
+  border-radius: 50%;
+}
+
+.promo-text h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3rem;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.promo-text p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.btn-white {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--blanc);
+  color: var(--rouge);
+  font-weight: 900;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 16px 36px;
+  border-radius: 8px;
+  transition: all 0.3s;
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.btn-white:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* ============================================================
+   CATEGORY PAGE STYLES
+   ============================================================ */
+.cat-hero {
+  padding: 60px 80px 40px;
+  background: linear-gradient(180deg, var(--gris-f) 0%, var(--noir) 100%);
+  border-bottom: 3px solid var(--accent-color, var(--rouge));
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.cat-hero-icon {
+  font-size: 5rem;
+  line-height: 1;
+}
+
+.cat-hero-text {}
+
+.cat-breadcrumb {
+  font-size: 0.8rem;
+  color: var(--gris-c);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.cat-breadcrumb a {
+  color: var(--gris-c);
+  transition: color 0.2s;
+}
+
+.cat-breadcrumb a:hover {
+  color: var(--accent-color, var(--rouge));
+}
+
+.cat-hero h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 4rem;
+  letter-spacing: 2px;
+  color: var(--blanc);
+}
+
+.cat-hero p {
+  color: var(--gris-c);
+  font-size: 1rem;
+  margin-top: 8px;
+}
+
+/* --- Products Grid --- */
+.products-section {
+  padding: 60px 40px 100px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.products-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.products-count {
+  font-size: 0.9rem;
+  color: var(--gris-c);
+  letter-spacing: 1px;
+}
+
+.sort-select {
+  background: var(--gris-f);
+  border: 1px solid var(--gris-m);
+  color: var(--blanc);
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-family: 'Barlow', sans-serif;
+  font-size: 0.9rem;
+  cursor: pointer;
+  outline: none;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+/* --- Product Card --- */
+.product-card {
+  background: var(--gris-f);
+  border: 1px solid var(--gris-m);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 24px 60px rgba(0,0,0,0.5);
+  border-color: var(--accent-color, var(--rouge));
+}
+
+.product-badge {
+  position: absolute;
+  top: 14px; left: 14px;
+  background: var(--rouge);
+  color: var(--blanc);
+  font-size: 0.7rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 4px;
+  z-index: 1;
+}
+
+.product-badge.new { background: var(--vert); }
+.product-badge.promo { background: var(--rouge); }
+.product-badge.top { background: var(--orange); }
+
+.product-img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.product-img-placeholder {
+  width: 100%;
+  height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 6rem;
+  background: linear-gradient(135deg, var(--gris-m), var(--gris-f));
+}
+
+.product-body {
+  padding: 20px;
+}
+
+.product-category {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--accent-color, var(--rouge));
+  margin-bottom: 6px;
+}
+
+.product-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  color: var(--blanc);
+  margin-bottom: 6px;
+}
+
+.product-desc {
+  font-size: 0.85rem;
+  color: var(--gris-c);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.product-stars {
+  color: var(--jaune);
+  font-size: 0.85rem;
+  margin-bottom: 12px;
+}
+
+.product-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.product-price {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.price-current {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.8rem;
+  color: var(--blanc);
+}
+
+.price-old {
+  font-size: 0.9rem;
+  color: var(--gris-c);
+  text-decoration: line-through;
+}
+
+.btn-add-cart {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--accent-color, var(--rouge));
+  color: var(--blanc);
+  border: none;
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.25s;
+  white-space: nowrap;
+}
+
+.btn-add-cart:hover {
+  filter: brightness(1.2);
+  transform: scale(1.04);
+}
+
+/* ============================================================
+   PANIER
+   ============================================================ */
+.panier-section {
+  padding: 60px 80px 100px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.panier-section h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3.5rem;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+}
+
+.panier-section h1 span { color: var(--rouge); }
+
+.panier-grid {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 40px;
+  align-items: start;
+}
+
+.panier-items {}
+
+.panier-item {
+  background: var(--gris-f);
+  border: 1px solid var(--gris-m);
+  border-radius: 14px;
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 16px;
+  transition: all 0.2s;
+}
+
+.panier-item:hover {
+  border-color: var(--rouge);
+}
+
+.panier-item-img {
+  font-size: 3.5rem;
+  width: 80px; height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gris-m);
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.panier-item-info { flex: 1; }
+
+.panier-item-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+}
+
+.panier-item-cat {
+  font-size: 0.8rem;
+  color: var(--rouge);
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.panier-item-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.qty-btn {
+  width: 30px; height: 30px;
+  background: var(--gris-m);
+  border: none;
+  color: var(--blanc);
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.qty-btn:hover { background: var(--rouge); }
+
+.qty-num {
+  font-weight: 700;
+  font-size: 1rem;
+  min-width: 24px;
+  text-align: center;
+}
+
+.panier-item-price {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.6rem;
+  color: var(--blanc);
+  flex-shrink: 0;
+}
+
+.btn-remove {
+  background: none;
+  border: none;
+  color: var(--gris-c);
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+  padding: 4px;
+}
+
+.btn-remove:hover { color: var(--rouge); }
+
+/* Résumé Panier */
+.panier-summary {
+  background: var(--gris-f);
+  border: 1px solid var(--gris-m);
+  border-radius: 16px;
+  padding: 30px;
+  position: sticky;
+  top: 90px;
+}
+
+.summary-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid var(--gris-m);
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+  font-size: 0.95rem;
+}
+
+.summary-row.total {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.5rem;
+  color: var(--blanc);
+  border-top: 2px solid var(--gris-m);
+  padding-top: 16px;
+  margin-top: 8px;
+}
+
+.summary-row.total .total-val { color: var(--rouge); }
+
+.summary-label { color: var(--gris-c); }
+
+.livraison-badge {
+  background: rgba(0,200,83,0.15);
+  color: var(--vert);
+  border: 1px solid rgba(0,200,83,0.3);
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 0.85rem;
+  margin: 16px 0 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-checkout {
+  display: block;
+  width: 100%;
+  background: linear-gradient(90deg, var(--rouge), var(--orange));
+  color: var(--blanc);
+  border: none;
+  padding: 18px;
+  border-radius: 10px;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 900;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-align: center;
+  text-decoration: none;
+}
+
+.btn-checkout:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(255,23,68,0.4);
+}
+
+.panier-empty {
+  text-align: center;
+  padding: 80px 40px;
+}
+
+.panier-empty .empty-icon { font-size: 6rem; margin-bottom: 20px; }
+
+.panier-empty h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.panier-empty p {
+  color: var(--gris-c);
+  margin-bottom: 30px;
+}
+
+/* ============================================================
+   A PROPOS
+   ============================================================ */
+.apropos-hero {
+  padding: 80px 80px 60px;
+  background: linear-gradient(135deg, var(--gris-f), var(--noir));
+  border-bottom: 3px solid var(--rouge);
+  text-align: center;
+}
+
+.apropos-hero h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(3rem, 7vw, 6rem);
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+.apropos-hero h1 span { color: var(--rouge); }
+
+.apropos-hero p {
+  color: rgba(255,255,255,0.7);
+  font-size: 1.15rem;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+.apropos-section {
+  padding: 80px 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.apropos-section.alt {
+  background: var(--gris-f);
+  max-width: 100%;
+  padding: 80px 120px;
+}
+
+.apropos-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.apropos-grid.reverse { direction: rtl; }
+
+.apropos-grid.reverse > * { direction: ltr; }
+
+.apropos-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--rouge);
+  margin-bottom: 16px;
+}
+
+.apropos-section h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.8rem;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  line-height: 1;
+}
+
+.apropos-section p {
+  color: rgba(255,255,255,0.7);
+  line-height: 1.8;
+  font-size: 1rem;
+  margin-bottom: 16px;
+}
+
+.apropos-img-block {
+  background: var(--gris-m);
+  border-radius: 20px;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8rem;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.valeurs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 60px;
+}
+
+.valeur-card {
+  background: var(--gris-f);
+  border: 1px solid var(--gris-m);
+  border-radius: 16px;
+  padding: 30px 24px;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.valeur-card:hover {
+  border-color: var(--rouge);
+  transform: translateY(-4px);
+}
+
+.valeur-icon { font-size: 2.5rem; margin-bottom: 16px; }
+
+.valeur-card h3 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.valeur-card p {
+  font-size: 0.9rem;
+  color: var(--gris-c);
+  line-height: 1.7;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 20px;
+}
+
+.team-card {
+  text-align: center;
+  background: var(--gris-f);
+  border: 1px solid var(--gris-m);
+  border-radius: 16px;
+  padding: 30px 20px;
+  transition: all 0.3s;
+}
+
+.team-card:hover {
+  border-color: var(--rouge);
+  transform: translateY(-4px);
+}
+
+.team-avatar {
+  width: 80px; height: 80px;
+  background: linear-gradient(135deg, var(--rouge), var(--orange));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin: 0 auto 16px;
+}
+
+.team-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+.team-role {
+  font-size: 0.8rem;
+  color: var(--rouge);
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.footer {
+  background: var(--gris-f);
+  border-top: 3px solid var(--rouge);
+  padding: 60px 80px 30px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+.footer-brand {}
+
+.footer-logo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.2rem;
+  letter-spacing: 3px;
+  background: linear-gradient(90deg, var(--rouge), var(--orange));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 16px;
+}
+
+.footer-desc {
+  color: var(--gris-c);
+  font-size: 0.9rem;
+  line-height: 1.8;
+  max-width: 280px;
+  margin-bottom: 24px;
+}
+
+.footer-social {
+  display: flex;
+  gap: 10px;
+}
+
+.social-btn {
+  width: 38px; height: 38px;
+  background: var(--gris-m);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  transition: all 0.25s;
+  text-decoration: none;
+}
+
+.social-btn:hover {
+  background: var(--rouge);
+  transform: translateY(-2px);
+}
+
+.footer-col h4 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  color: var(--blanc);
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--rouge);
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  color: var(--gris-c);
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.footer-col ul li a:hover {
+  color: var(--blanc);
+  padding-left: 6px;
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--gris-m);
+  padding-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.footer-copy {
+  font-size: 0.85rem;
+  color: var(--gris-c);
+}
+
+.footer-bottom-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-bottom-links a {
+  font-size: 0.85rem;
+  color: var(--gris-c);
+  transition: color 0.2s;
+}
+
+.footer-bottom-links a:hover { color: var(--blanc); }
+
+/* ============================================================
+   TOAST NOTIFICATION
+   ============================================================ */
+.toast {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: var(--vert);
+  color: var(--blanc);
+  padding: 14px 24px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transform: translateY(80px);
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+}
+
+.toast.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 1100px) {
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .team-grid { grid-template-columns: repeat(2, 1fr); }
+  .panier-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 900px) {
+  .navbar { padding: 0 20px; }
+  .nav-links { gap: 4px; }
+  .nav-links a { padding: 6px 10px; font-size: 0.75rem; }
+  .hero-content { padding: 0 40px; }
+  .stats-bar { grid-template-columns: repeat(2, 1fr); padding: 30px 40px; }
+  .apropos-grid { grid-template-columns: 1fr; gap: 40px; }
+  .apropos-grid.reverse { direction: ltr; }
+  .valeurs-grid { grid-template-columns: 1fr 1fr; }
+  .cat-hero { padding: 40px 40px 30px; flex-direction: column; text-align: center; }
+  .panier-section { padding: 40px 30px 80px; }
+  .apropos-section { padding: 60px 40px; }
+  .apropos-section.alt { padding: 60px 40px; }
+}
+
+@media (max-width: 600px) {
+  .nav-links { display: none; }
+  .hero-content { padding: 0 20px; }
+  .categories-section { padding: 0 20px 60px; }
+  .hero-btns { flex-direction: column; }
+  .promo-banner { flex-direction: column; text-align: center; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .valeurs-grid { grid-template-columns: 1fr; }
+  .team-grid { grid-template-columns: repeat(2, 1fr); }
+  .products-section { padding: 40px 20px 80px; }
+}
